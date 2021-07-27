@@ -29,9 +29,11 @@ const renderDataAsHtml = (data) => {
 }
 
 const createCard = (note) => {
+    const colorOptions = ['#56C4E8', '#D0E068', '#CD9EC0', '#ED839D', '#FFE476'];
+    const backgroundColor = colorOptions[Math.floor(Math.random() * colorOptions.length)]
     return `
         <div class="column is-one-quarter">
-            <div class="card">
+            <div class="card" style="background:${backgroundColor};">
                 <header class="card-header">
                     <p class="card-header-title">${note.title}</p>
                 </header>

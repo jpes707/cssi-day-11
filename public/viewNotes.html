@@ -36,6 +36,42 @@
           <!-- Note cards will render here -->
         </div>
       </div>
+      <div id="editNoteModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <section class="modal-card-body">
+            Title: <input class="input is-normal" id="editTitleInput" type="text" />
+            Text: <input class="input is-normal" id="editTextInput" type="text" />
+            <input id="editNoteId" type="hidden" />
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success" onclick="saveEditedNote()">
+              Save changes
+            </button>
+            <button class="button" onclick="toggleEditNoteModal()">
+              Cancel
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="deleteNoteModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <section class="modal-card-body">
+            <p>Are you sure you want to delete this note?</p>
+            <input id="deleteNoteId" type="hidden" />
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-danger" onclick="saveDeletedNote()">
+              Confirm
+            </button>
+            <button class="button" onclick="toggleDeleteNoteModal()">
+              Cancel
+            </button>
+          </footer>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="container">

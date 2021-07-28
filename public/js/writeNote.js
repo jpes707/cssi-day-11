@@ -15,7 +15,7 @@ window.onload = () => {
         const noteTitle = document.querySelector("#noteTitle").value;
         const noteText = document.querySelector("#noteText").value;
 
-        firebase.database().ref(`/users/${googleUser.uid}`).push({
+        firebase.database().ref(`users/${googleUser.uid}`).push({
             title: noteTitle,
             text: noteText
         }).then(() => {

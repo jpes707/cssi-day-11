@@ -1,1 +1,1 @@
-<?php include_once("public/*"); ?>
+<?php set_include_path('public/'); ?>
